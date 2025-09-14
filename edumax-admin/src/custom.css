@@ -82,6 +82,25 @@ input[type="submit"]:hover {
     border-color: #1e3550;
 }
 
+.custom-form-container {
+    background-color: #f8f9fa;
+    border: 1px solid #e3e3e3;
+}
+
+.custom-form-title {
+    color: #2a4d69;
+}
+
+.custom-btn {
+    background-color: #2a4d69;
+    border-color: #2a4d69;
+}
+
+.custom-btn:hover {
+    background-color: #1e3550;
+    border-color: #1e3550;
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0.5rem;

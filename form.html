@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="home.html">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Main navigation">
+        <a class="navbar-brand" href="#">
             <img src="assets/logo.png" alt="EduMax Logo" width="30" height="30" class="d-inline-block align-top">
             EduMax Admin
         </a>
@@ -18,51 +18,62 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="home.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="modules.html">Modules</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="events.html">Learning Events</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="news.html">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="announcements.html">Announcements</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="users.html">User Management</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Modules</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Learning Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Announcements</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">User Management</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="container mt-4">
+    <main class="container mt-4" role="main">
         <h2>Edit News Item</h2>
-        <form action="https://students.open.ac.uk/mct/tm252/reflect/reflect.php" method="POST">
+        <form action="https://students.open.ac.uk/mct/tm252/reflect/reflect.php" method="POST" class="needs-validation" novalidate>
             <input type="hidden" name="itemID" value="10002000-3000-123456abcdef">
             
             <div class="form-group">
                 <label for="newsTitle">Title</label>
-                <input type="text" class="form-control" id="newsTitle" name="newsTitle" value="Sample News Title" required>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="newsTitle" 
+                    name="newsTitle" 
+                    value="Sample News Title" 
+                    required 
+                    aria-required="true"
+                >
             </div>
             
             <div class="form-group">
                 <label for="newsContent">Content</label>
-                <textarea class="form-control" id="newsContent" name="newsContent" rows="5" required>Sample news content goes here.</textarea>
+                <textarea 
+                    class="form-control" 
+                    id="newsContent" 
+                    name="newsContent" 
+                    rows="5" 
+                    required 
+                    aria-required="true"
+                >Sample news content goes here.</textarea>
             </div>
             
             <div class="form-group">
                 <label for="newsDate">Date</label>
-                <input type="date" class="form-control" id="newsDate" name="newsDate" value="2023-10-01" required>
+                <input 
+                    type="date" 
+                    class="form-control" 
+                    id="newsDate" 
+                    name="newsDate" 
+                    value="2023-10-01" 
+                    required 
+                    aria-required="true"
+                >
             </div>
             
             <button type="submit" class="btn btn-primary">Update News Item</button>
         </form>
-    </div>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
